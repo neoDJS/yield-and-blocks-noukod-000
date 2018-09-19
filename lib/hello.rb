@@ -1,8 +1,12 @@
 def hello_t(array)
-  array.length.times do |i|
-    #yield
-    yield(array[i])
-    #yield(array[i], i)
+  if block_given?
+    array.length.times do |i|
+      #yield
+      yield(array[i])
+      #yield(array[i], i)
+    end
+  else
+    puts "Hey! No block was given!" 
   end
   array
 end
