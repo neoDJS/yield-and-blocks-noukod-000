@@ -1,8 +1,8 @@
 def hello_t(array)
   array.length.times do |i|
-    yield
+    #yield
     yield(array[i])
-    yield(array[i], i)
+    #yield(array[i], i)
   end
 end
 
